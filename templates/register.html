@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block main %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center m-4">
+                        <h3>SIGN UP</h3>
+                    </div>
+                    {% for messages in get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <div class="alert alert-{{ messages[0] }}" role="alert">
+                                {{ messages[1] }}
+                            </div>  
+                        {% endif %}
+                    {% endfor %}
+                    <form action="/signup" method="post">
+                        <div class="mb-4">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <input autocomplete="off" autofocus name="username" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name</label>
+                            <div class="input-group">
+                                <input autocomplete="off" autofocus name="name" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <input class="form-control" name="password" type="password">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="confirmation" class="form-label">Repeat password</label>
+                            <div class="input-group">
+                                <input class="form-control" name="confirmation" type="password">
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary" type="submit">Register</button>
+                        </div>
+                    </form>
+                    <hr class="my-3">
+                    <div class="text-center">
+                        <p>Already have an account? <a class="text-primary" href="/login">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

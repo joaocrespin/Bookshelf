@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block main %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title mb-0">About This Project</h2>
+                </div>
+                <div class="card-body">
+                    <p class="lead">A modern web application designed to help users manage and organize their books. 
+                        It offers a simple way to catalog your literary adventures, ensuring you never lose track of the stories, insights, and ideas you've encountered within the pages of your books.<br>
+                        Made by: João Guilherme (Crespin)
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title mb-0">Technologies</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Backend</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Flask - Web Framework</li>
+                                        <li>SQLAlchemy - ORM</li>
+                                        <li>Flask-Login - Authentication</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Frontend</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Bootstrap 5 - UI Framework</li>
+                                        <li></i>HTML5</li>
+                                        <li></i>CSS3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

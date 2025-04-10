@@ -1,0 +1,52 @@
+:root[data-bs-theme="dark"] {
+    --body-bg: #0D1A2D;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-border: rgba(255, 255, 255, 0.2);
+    --input-bg: rgba(255, 255, 255, 0.1);
+    --input-border: rgba(255, 255, 255, 0.5);
+}
+
+:root[data-bs-theme="light"] {
+    --body-bg: #FAFAFA;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-border: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--body-bg);
+    font-family: "Segoe UI", sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.bg-primary {
+    background-color: var(--card-bg) !important;
+}
+
+.theme {
+    font-weight:600;
+}
