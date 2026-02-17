@@ -83,15 +83,15 @@ def edit_book(book_id):
 
         if not title:
             flash("You still need a title", "danger")
-            return redirect(url_for("bookshelf.add"))
+            return redirect(url_for("bookshelf.edit_book", book_id=book_id))
         
         if not current or not total:
             flash("Don't forget about the pages", "danger")
-            return redirect(url_for("bookshelf.add"))
+            return redirect(url_for("bookshelf.edit_book", book_id=book_id))
 
         if current > total:
             flash("Current page must be less or equal than the total number of pages.", "danger")
-            return redirect(url_for("bookshelf.add"))
+            return redirect(url_for("bookshelf.edit_book", book_id=book_id))
         
         # Changes the selected book values to new ones
         user_book.book.title = title
